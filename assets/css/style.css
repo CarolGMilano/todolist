@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
+
+:root {
+    --black: #041C32;
+    --dark-gray: #04293A;
+    --turquoise: #46C2CB;
+
+    --font: 'Raleway', sans-serif;
+}
