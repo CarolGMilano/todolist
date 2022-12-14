@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
 
+@import url('mobile/body.css');
+@import url('mobile/header.css');
+
 :root {
-    --black: #041C32;
-    --dark-gray: #04293A;
+    --black: #000000;
+    --dark-gray: #181717;
     --turquoise: #46C2CB;
+    --white: #FEFCF3;
+    --rose: #FF8787;
 
     --font: 'Raleway', sans-serif;
 }
