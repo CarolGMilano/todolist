@@ -1,0 +1,55 @@
+@import '../abstract/variables';
+
+.main__tasks {
+    margin: 1rem auto;
+
+    width: 90%;
+
+    .tasks__list {
+        li {
+            background-color: $dark-gray;
+
+            border-radius: 10px;
+
+            display: flex;
+            justify-content: space-between;
+
+            padding: 1rem;
+
+            margin-bottom: .5rem;
+
+            .container {
+                display: flex;
+
+                .checkbox:checked ~ .task__text {
+                    text-decoration: line-through;
+                    opacity: .5;
+                }
+
+                .task__text {
+                    color: $white;
+
+                    padding-left: .5rem;
+                }
+            }
+
+            .task__del {
+                color: $rose-pastel;
+                
+                width: 10px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .main__tasks {
+        width: 580px;
+
+        margin: 1rem auto;
+    }
+}

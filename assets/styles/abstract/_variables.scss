@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Lufga-Regular';
+    src: url('../fonts/Lufga-Regular.otf') format('opentype');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lufga-Thin';
+    src: url('../fonts/Lufga-Thin.otf') format('opentype');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+$black: #000000;
+$blue-pastel: #99C4C8;
+$dark-gray: #212324;
+$gray: #73777B;
+$rose-pastel: #FFB9B9;
+$white: #FEFCF3;
+$yellow-pastel: #F8F988;
+
+$font-thin: 'Lufga-Thin', sans-serif;
+$font-regular: 'Lufga-Regular', sans-serif;

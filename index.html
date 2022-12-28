@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="assets/css/reset.css">
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/styles/reset.css">
+        <link rel="stylesheet" href="assets/styles/style.css">
 
-        <link rel="shortcut icon" href="assets/img/square-check-regular.svg" type="image/x-icon">
-        <title>todolist</title>
+        <link rel="shortcut icon" href="assets/img/check.svg" type="image/x-icon">
+        <title>to-do list</title>
     </head>
 
     <body>
-        <header class="header">
-            <div class="header__draw">
-                <div class="draw__icon"></div>
-            </div>
-        
-            <h1 class="header__title"><span class="detail">Todo</span> list</h1>
+        <header class="header"> 
+            <h1 class="header__title"><span class="detail">to-do</span> list<span class="point">.</span></h1>
         </header>
+
+        <main class="main">
+            <form action class="main__form" data-form>
+                <label for="task"></label>
+                <input type="text" name="task" id="task" class="form__newTask" data-inputTexto placeholder="new task">
+
+                <input type="submit" value="+" class="form__add" data-add>
+            </form>
+
+            <section class="main__tasks">
+                <ul class="tasks__list" data-taskList>
+                </ul>
+            </section>
+        </main>
+
+        <script src="assets/app/main.js"></script>
     </body>
 </html>

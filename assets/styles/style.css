@@ -1,0 +1,186 @@
+@font-face {
+  font-family: "Lufga-Regular";
+  src: url("../fonts/Lufga-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lufga-Thin";
+  src: url("../fonts/Lufga-Thin.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-color: #000000;
+  font-family: "Lufga-Thin", sans-serif;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Lufga-Regular";
+  src: url("../fonts/Lufga-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lufga-Thin";
+  src: url("../fonts/Lufga-Thin.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lufga-Regular";
+  src: url("../fonts/Lufga-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lufga-Thin";
+  src: url("../fonts/Lufga-Thin.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+.header .header__title {
+  font-size: 30px;
+  color: #FEFCF3;
+}
+.header .header__title .detail {
+  -webkit-text-decoration: underline #99C4C8;
+          text-decoration: underline #99C4C8;
+}
+.header .header__title .point {
+  font-size: 50px;
+  color: #99C4C8;
+}
+
+@media screen and (min-width: 650px) {
+  .header {
+    width: 650px;
+    margin: 0 auto;
+  }
+}
+@font-face {
+  font-family: "Lufga-Regular";
+  src: url("../fonts/Lufga-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lufga-Thin";
+  src: url("../fonts/Lufga-Thin.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+.main__form {
+  display: flex;
+  justify-content: center;
+  margin: 0 0.5rem;
+  border-radius: 10px;
+  position: relative;
+}
+.main__form .form__newTask {
+  width: 90%;
+  height: 25px;
+  background-color: #000000;
+  border: 1px solid #73777B;
+  border-radius: 10px;
+  color: #FEFCF3;
+  font-family: "Lufga-Regular", sans-serif;
+  padding: 1rem 1rem 1rem 2.5rem;
+}
+.main__form .form__add {
+  position: absolute;
+  left: 8%;
+  top: 10px;
+  background-color: #000000;
+  border: 1px solid #99C4C8;
+  border-radius: 100%;
+  color: #99C4C8;
+  font-size: 10px;
+  padding: 0.1rem 0.3rem;
+}
+.main__form .form__add:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 650px) {
+  .main__form {
+    width: 650px;
+    margin: 0 auto;
+  }
+  .main__form .form__newTask {
+    height: 50px;
+    padding: 1rem 1rem 1rem 3rem;
+    font-size: 16px;
+  }
+  .main__form .form__newTask::-moz-placeholder {
+    font-size: 16px;
+  }
+  .main__form .form__newTask:-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .main__form .form__newTask::placeholder {
+    font-size: 16px;
+  }
+  .main__form .form__add {
+    position: absolute;
+    left: 7%;
+    top: 12px;
+    padding: 0.1rem 0.5rem;
+    font-size: 20px;
+  }
+}
+@font-face {
+  font-family: "Lufga-Regular";
+  src: url("../fonts/Lufga-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lufga-Thin";
+  src: url("../fonts/Lufga-Thin.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+.main__tasks {
+  margin: 1rem auto;
+  width: 90%;
+}
+.main__tasks .tasks__list li {
+  background-color: #212324;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+.main__tasks .tasks__list li .container {
+  display: flex;
+}
+.main__tasks .tasks__list li .container .checkbox:checked ~ .task__text {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.main__tasks .tasks__list li .container .task__text {
+  color: #FEFCF3;
+  padding-left: 0.5rem;
+}
+.main__tasks .tasks__list li .task__del {
+  color: #FFB9B9;
+  width: 10px;
+}
+.main__tasks .tasks__list li .task__del:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 650px) {
+  .main__tasks {
+    width: 580px;
+    margin: 1rem auto;
+  }
+}/*# sourceMappingURL=style.css.map */

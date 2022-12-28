@@ -1,0 +1,78 @@
+@import '../abstract/variables';
+
+.main__form {
+    display: flex;
+    justify-content: center;
+
+    margin: 0 .5rem;
+
+    border-radius: 10px;
+
+    position: relative;
+
+    .form__newTask {
+        width: 90%;
+        height: 25px;
+
+        background-color: $black;
+
+        border: 1px solid $gray;
+        border-radius: 10px;
+
+        color: $white;
+        font-family: $font-regular;
+
+        padding: 1rem 1rem 1rem 2.5rem;
+    }
+
+    .form__add {
+        position: absolute;
+        left: 8%;
+        top: 10px;
+
+        background-color: $black;
+
+        border: 1px solid $blue-pastel;
+        border-radius: 100%;
+
+        color: $blue-pastel;
+        font-size: 10px;
+
+        padding: .1rem .3rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .main__form {
+        width: 650px;
+
+        margin: 0 auto;
+
+        .form__newTask {
+            height: 50px;
+            
+            padding: 1rem 1rem 1rem 3rem;
+
+            font-size: 16px;
+
+            &::placeholder {
+                font-size: 16px;
+            }
+        }
+
+        .form__add {
+            position: absolute;
+            left: 7%;
+            top: 12px;
+    
+            padding: .1rem .5rem;
+
+            font-size: 20px;
+        }
+    }
+}
+
