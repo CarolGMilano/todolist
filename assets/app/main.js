@@ -16,7 +16,7 @@ let arrayTasks = JSON.parse(localStorage.getItem('tasks')) || [];
                 <div class="task__del" data-btnDeletar>X</div>
             </li>
             `
-
+            
         botaoDeletar(item.id);       
     }
 
@@ -37,9 +37,38 @@ let arrayTasks = JSON.parse(localStorage.getItem('tasks')) || [];
             })
         })
     }
-    
+
+    function verificarCheckbox(item) {
+        let listaCheckbox = document.querySelectorAll('[data-checkbox]'); 
+
+        const receberDadosExistentes = localStorage.getItem('tasks'); 
+        const localTasks = JSON.parse(receberDadosExistentes);
+
+            if(item.done) {
+                listaCheckbox[item.id].setAttribute('checked', '')
+            }
+
+            listaCheckbox.forEach(box => {
+                
+                box.addEventListener('click', function() {
+                    const idCheckbox = Number(this.parentNode.parentNode.dataset.id);
+
+                    if(this.checked) {   
+                        localTasks[idCheckbox].done = true;
+                        localStorage.setItem('tasks', JSON.stringify(localTasks));
+                        
+                    } else {   
+                        localTasks[idCheckbox].done = false;
+                        localStorage.setItem('tasks', JSON.stringify(localTasks));
+                    }
+                })
+            })
+    }
+
         arrayTasks.forEach(item => {
             criarElemento(item);
+
+            verificarCheckbox(item);
         });
         
         form.addEventListener('submit', function (event) {
@@ -54,7 +83,8 @@ let arrayTasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
                 const novaTask = {
                     'task': task.value,
-                    'id': arrayTasks[arrayTasks.length -1] ? (arrayTasks[arrayTasks.length -1]).id +1 : 0
+                    'id': arrayTasks[arrayTasks.length -1] ? (arrayTasks[arrayTasks.length -1]).id +1 : 0,
+                    'done': false
                 }
                     
                     arrayTasks.push(novaTask);
@@ -65,7 +95,5 @@ let arrayTasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
                     task.value = '';
             }
-            
         })
-
         
